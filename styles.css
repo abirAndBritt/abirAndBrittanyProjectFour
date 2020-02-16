@@ -312,3 +312,6 @@ button:focus {
 h1 {
   color: #2e7a8d;
   line-height: 3.5rem; }
+
+.hidden {
+  display: none; }

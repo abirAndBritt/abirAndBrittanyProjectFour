@@ -12,14 +12,25 @@
     </header>
     <main>
         <section>
-            <h2>
-                what is your mood today?
-            </h2>
-            <ul>
-                <li><button id='sleepy' class="mood">Sleepy</button></li>
-                <li><button id='boost' class="mood">in need of boost</button></li>
-                <li><button id='alcohol' class="mood">it has been a day</button></li>
-            </ul>
+            <div class="moodDiv">
+                <h2>
+                    what is your mood today?
+                </h2>
+                <ul>
+                    <li><button id='sleepy' class="moodButton">Sleepy</button></li>
+                    <li><button id='boost' class="moodButton">in need of boost</button></li>
+                    <li><button id='alcohol' class="moodButton">it has been a day</button></li>
+                </ul>
+            </div>
+            <div class="resultDiv hidden">
+                <h2 id="drinkTitle"></h2>
+                <img src="" alt="" id="drinkImage">
+                <h3>Ingredients</h3>
+                <ul class="ingredients">
+
+                </ul>
+                <a href="" id="drinkLink"></a>
+            </div>
         </section>
     </main>
     <footer>

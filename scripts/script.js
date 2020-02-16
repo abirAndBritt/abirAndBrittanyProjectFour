@@ -12,16 +12,33 @@ drinkApp.apiCall = function (queryString){
 
         }
     }).then(function (result) {
-        console.log(result);
-
+        drinkApp.showResult(result);
     });
 }
-drinkApp.eventListener=function(){
-    $('.mood').on('click', function(){
-        if($(this).attr('id')==='sleepy'){
-            drinkApp.apiCall('coffee')
-        }
 
+drinkApp.randomizer =function(resultLength){
+    const selectedDrinkIndex = Math.floor(Math.random() * resultLength);
+    return selectedDrinkIndex;
+}
+
+drinkApp.showResult =function(result){
+    const selectedDrinkIndex = drinkApp.randomizer(result.hits.length);
+    $('.moodDiv').toggleClass('hidden');
+    $('.resultDiv').toggleClass('hidden');
+    $('#drinkTitle').text(result.hits[selectedDrinkIndex].recipe.label);
+    $('#drinkImage').attr('src', result.hits[selectedDrinkIndex].recipe.image);
+    $('#drinkImage').attr('alt', result.hits[selectedDrinkIndex].recipe.label);
+}
+
+drinkApp.eventListener=function(){
+    $('.moodButton').on('click', function(){
+        if($(this).attr('id')==='sleepy'){
+            drinkApp.apiCall('coffee');
+        } else if ($(this).attr('id') === 'boost') {
+            drinkApp.apiCall('smoothie'); 
+        } else {
+            drinkApp.apiCall('alcohol');
+        }
     });
 }
 
