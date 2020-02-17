@@ -16,42 +16,44 @@
         <section>
             <div class="moodDiv">
 
-                <form action="">
+                
                     <h2>
                         what is your mood today?
                     </h2>
-                    <input type="radio" name="mood" id="sleepy" value="coffee" checked>
-                    <label for="sleepy">sleepy</label>
-                    <input type="radio" name="mood" id="boost" value="smoothie">
-                    <label for="boost">in need of boost</label>
-                    <input type="radio" name="mood" id="alcohol" value="wine">
-                    <label for="alcohol">it has been a day</label>
-                    <button id="customizeButton">customize</button>
-                    <div class="hidden">
-                        <label for="calorie"></label>
-                        <input type="number" name="" id="calorie" min="0" max="1000" step="1">
-                        <h2>Dietary Restrictions</h2">
-                        <input type="checkbox" name="" id="sugarFree">
-                        <label for="sugarFree">Sugar Free</label>
-                    <input type="checkbox" name="" id="lowSugar">
-                    <label for="lowSugar">Low Sugar</label>
-                    <input type="checkbox" name="" id="dairyFree">
-                    <label for="dairyFree">Dairy Free</label>
+                    <button id="coffee" class="mood">sleepy</button>
+                    <button id="smoothie" class="mood">in need of a boost</button>
+                    <button id="wine" class="mood">it's been a day</button>
 
                     </div>
-<button id="submitButton" type="submit">submit</button>
-                </form>
+                    <form action="" class="hidden">
+                        <label for="oneIngredient">Include this ingredient:</label>
+                        <input type="text" name="" id="oneIngredient">
+                        <label for="calories"></label>
+                        <input type="number" name="" id="calories" min="0" max="1000" step="1">
+                        <h2>Dietary Restrictions</h2>
+                        <input type="checkbox" name="" id="sugar">
+                        <label for="sugar">Sugar Free</label>
+                        <input type="checkbox" name="" id="gluten">
+                        <label for="gluten">Gluten-Free</label>
+                        <input type="checkbox" name="" id="dairy">
+                        <label for="dairy">Dairy Free</label>
+
+                        <button id="submitButton" type="submit">submit</button>
+                    </form>
 
 
-
-            </div>
             <div class="resultDiv hidden">
                 <h2 id="drinkTitle"></h2>
+                <!-- add image container with max width -->
                 <img src="" alt="" id="drinkImage">
                 <h3>Ingredients</h3>
                 <ul class="ingredients">
 
                 </ul>
+                <h3>Instructions</h3>
+                <ol class="instructions">
+
+                </ol>
                 <a target="_blank" href="" id="drinkLink">Click here for more information</a>
                 <button id="anotherDrinkButton">give me another option</button>
             </div>
