@@ -8,7 +8,8 @@ drinkApp.apiCall = function (queryString,oneIngredient ,calories, sugar, gluten,
         dataType: 'json',
         data: {
             // apiKey: 'b5a81aab75e347daa78075a3628b5389',
-            apiKey: 'a60cdfa9200e4a088a41ebe8d60680fe',
+            //apiKey: 'a60cdfa9200e4a088a41ebe8d60680fe',
+            apiKey: '8a2c682e514a439d902fe345650979ed',
             type: 'drink',
             addRecipeInformation: 'true',
             titleMatch: queryString,
@@ -21,14 +22,16 @@ drinkApp.apiCall = function (queryString,oneIngredient ,calories, sugar, gluten,
         }
 
     }).then(function (result) {
+        
+        $('.preloader').fadeOut('slow');
         drinkApp.drinks = result.results;
         if (drinkApp.drinks.length !== 0) {
-            $('form').addClass('hidden');
             $('.resultDiv').removeClass('hidden');
             drinkApp.showResult();
         }
         else {
             alert('There is no matching drink!! Please try again!!');
+            $('form').removeClass('hidden');
         }
         
     });
@@ -40,7 +43,8 @@ drinkApp.getIngredients = function (id) {
         method: 'GET',
         dataType: 'json',
         data: {
-            apiKey: 'a60cdfa9200e4a088a41ebe8d60680fe',
+            //apiKey: 'a60cdfa9200e4a088a41ebe8d60680fe',
+            apiKey: '8a2c682e514a439d902fe345650979ed',
         }
 
     }).then(function (result) {
@@ -64,7 +68,8 @@ drinkApp.autocompleteIngredients = function (text, newArray) {
         method: 'GET',
         dataType: 'json',
         data: {
-            apiKey: 'a60cdfa9200e4a088a41ebe8d60680fe',
+            //apiKey: 'a60cdfa9200e4a088a41ebe8d60680fe',
+            apiKey: '8a2c682e514a439d902fe345650979ed',
             query: text,
             number: 10,
         }
@@ -139,9 +144,9 @@ drinkApp.submitEventListener = function () {
         if ($('#dairy').prop('checked') === true) {
             dairy = $('#dairy').attr('id');
         }
+        $('form').addClass('hidden');
+        $('.preloader').fadeIn('slow');
         drinkApp.apiCall(drinkApp.mood, oneIngredient ,calories, sugar, gluten, dairy); 
-        
-       
     });
 }
 // drinkApp.counter=0;

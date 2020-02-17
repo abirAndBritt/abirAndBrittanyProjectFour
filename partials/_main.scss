@@ -1,3 +1,16 @@
 .hidden {
     display: none;
 }
+
+.preloader {
+   position: absolute;
+   top: 30%;
+   left: 30%;
+   width: 30%;
+   height: 30%;
+   z-index: 9999;
+   background-image: url('./assets/preloader.gif');
+   background-repeat: no-repeat; 
+   //background-color: #FFF;
+   background-position: center;
+}
