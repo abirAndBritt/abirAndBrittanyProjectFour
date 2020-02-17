@@ -1,51 +1,88 @@
-const drinkApp={};
-drinkApp.apiCall = function (queryString){
+const drinkApp = {};
+drinkApp.drinks;
+drinkApp.apiCall = function (queryString) {
     $.ajax({
-        url: 'https://api.edamam.com/search',
+        url: 'https://api.spoonacular.com/recipes/complexSearch',
         method: 'GET',
         dataType: 'json',
         data: {
-            app_id: '64e44f2c',
-            app_key: 'a227b3ca7e2072598902a784d880a927',
-            q: queryString,
-            dishtype: 'drinks'
-
+            apiKey: 'b5a81aab75e347daa78075a3628b5389',
+            type: 'drink',
+            addRecipeInformation: 'true',
+            titleMatch: queryString,
+            number: 100,
         }
+
     }).then(function (result) {
-        drinkApp.showResult(result);
+        drinkApp.drinks = result.results;
+        drinkApp.showResult();
+
     });
 }
 
-drinkApp.randomizer =function(resultLength){
+drinkApp.getIngredients = function (id) {
+    $.ajax({
+        url: `https://api.spoonacular.com/recipes/${id}/information`,
+        method: 'GET',
+        dataType: 'json',
+        data: {
+            apiKey: 'b5a81aab75e347daa78075a3628b5389',
+        }
+
+    }).then(function (result) {
+        $('.ingredients').empty();
+        result.extendedIngredients.forEach(function (item) {
+            const listItem = `<li>${item.original} </li>`;
+            $('.ingredients').append(listItem);
+        });
+
+    });
+}
+
+drinkApp.randomizer = function (resultLength) {
     const selectedDrinkIndex = Math.floor(Math.random() * resultLength);
     return selectedDrinkIndex;
 }
+drinkApp.removeDrink = function (index) {
+    drinkApp.drinks.splice(index, 1);
 
-drinkApp.showResult =function(result){
-    const selectedDrinkIndex = drinkApp.randomizer(result.hits.length);
-    $('.moodDiv').toggleClass('hidden');
-    $('.resultDiv').toggleClass('hidden');
-    $('#drinkTitle').text(result.hits[selectedDrinkIndex].recipe.label);
-    $('#drinkImage').attr('src', result.hits[selectedDrinkIndex].recipe.image);
-    $('#drinkImage').attr('alt', result.hits[selectedDrinkIndex].recipe.label);
+}
+drinkApp.anotherOptionEventListener = function () {
+    $('#anotherDrinkButton').on('click', function () {
+        drinkApp.showResult()
+    });
+
 }
 
-drinkApp.eventListener=function(){
-    $('.moodButton').on('click', function(){
-        if($(this).attr('id')==='sleepy'){
-            drinkApp.apiCall('coffee');
-        } else if ($(this).attr('id') === 'boost') {
-            drinkApp.apiCall('smoothie'); 
-        } else {
-            drinkApp.apiCall('alcohol');
-        }
+
+drinkApp.showResult = function () {
+    const selectedDrinkIndex = drinkApp.randomizer(drinkApp.drinks.length);
+    $('.moodDiv').addClass('hidden');
+    $('.resultDiv').removeClass('hidden');
+    $('#drinkTitle').text(drinkApp.drinks[selectedDrinkIndex].title);
+    $('#drinkImage').attr('src', drinkApp.drinks[selectedDrinkIndex].image);
+    $('#drinkImage').attr('alt', drinkApp.drinks[selectedDrinkIndex].title);
+    drinkApp.getIngredients(drinkApp.drinks[selectedDrinkIndex].id);
+    $('#drinkLink').attr('href', drinkApp.drinks[selectedDrinkIndex].sourceUrl);
+    drinkApp.removeDrink(selectedDrinkIndex);
+
+
+}
+
+drinkApp.submitEventListener = function () {
+    $('#submitButton').on('click', function (e) {
+        e.preventDefault();
+        const mood = $('input[type=radio]:checked').val();
+        drinkApp.apiCall(mood);
+
     });
 }
 
-drinkApp.init=function (){
-drinkApp.eventListener();
-    
+drinkApp.init = function () {
+    drinkApp.submitEventListener();
+    drinkApp.anotherOptionEventListener();
+
 }
-$(function(){
+$(function () {
     drinkApp.init();
 })
