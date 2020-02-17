@@ -1,7 +1,7 @@
 const drinkApp = {};
 drinkApp.drinks;
 drinkApp.mood;
-drinkApp.apiCall = function (queryString, calories, sugar, gluten, dairy) {
+drinkApp.apiCall = function (queryString,oneIngredient ,calories, sugar, gluten, dairy) {
     $.ajax({
         url: 'https://api.spoonacular.com/recipes/complexSearch',
         method: 'GET',
@@ -14,6 +14,7 @@ drinkApp.apiCall = function (queryString, calories, sugar, gluten, dairy) {
             titleMatch: queryString,
             number: 100,
             instructionsRequired: 'true',
+            includeIngredients: oneIngredient,
             maxCalories: calories,
             maxSugar: sugar,
             intolerances: gluten, dairy,
@@ -21,7 +22,15 @@ drinkApp.apiCall = function (queryString, calories, sugar, gluten, dairy) {
 
     }).then(function (result) {
         drinkApp.drinks = result.results;
-        drinkApp.showResult();
+        if (drinkApp.drinks.length !== 0) {
+            $('form').addClass('hidden');
+            $('.resultDiv').removeClass('hidden');
+            drinkApp.showResult();
+        }
+        else {
+            alert('There is no matching drink!! Please try again!!');
+        }
+        
     });
 }
 
@@ -49,13 +58,7 @@ drinkApp.getIngredients = function (id) {
     });
 }
 
-drinkApp.oneIngredientChangeListener = function(){
-    $('#oneIngredient').autocomplete({source:
-        console.log($('#oneIngredient').val());
-        drinkApp.autocompleteIngredients($('#oneIngredient').val());
-    })
-}
-drinkApp.autocompleteIngredients = function (text) {
+drinkApp.autocompleteIngredients = function (text, newArray) {
     $.ajax({
         url: `https://api.spoonacular.com/food/ingredients/autocomplete`,
         method: 'GET',
@@ -67,9 +70,19 @@ drinkApp.autocompleteIngredients = function (text) {
         }
 
     }).then(function (result) {
-        console.log(result);
+     result.forEach(function(item){
+         newArray.push(item.name);
+     });
+    //  console.log(newArray);
     });
 }
+
+// drinkApp.autoComplete=function () {
+  
+//     $('#oneIngredient').autocomplete({
+//         source: availableTutorials
+// });
+// }
 
 
 
@@ -109,15 +122,15 @@ drinkApp.moodEventListener = function() {
 drinkApp.submitEventListener = function () {
     $('#submitButton').on('click', function (e) {
         e.preventDefault();
-        $('form').addClass('hidden');
-        $('.resultDiv').removeClass('hidden');
-        let gluten = dairy = '';
+        let gluten = dairy = oneIngredient= '';
         let calories = sugar = 1000;
+        if ($('#oneIngredient').val() !== '') {
+            oneIngredient = $('#oneIngredient').val();
+        }
         if ($('#calories').val() !== '') {
             calories = $('#calories').val();
         }
         if ($('#sugar').prop('checked') === true) {
-            //sugar = $('#sugar').attr('id');
             sugar = 0;
         }
         if ($('#gluten').prop('checked') === true) {
@@ -126,17 +139,64 @@ drinkApp.submitEventListener = function () {
         if ($('#dairy').prop('checked') === true) {
             dairy = $('#dairy').attr('id');
         }
-        drinkApp.apiCall(drinkApp.mood, calories, sugar, gluten, dairy); 
+        drinkApp.apiCall(drinkApp.mood, oneIngredient ,calories, sugar, gluten, dairy); 
+        
+       
     });
+}
+// drinkApp.counter=0;
+//  drinkApp.suggestionArray=[];
+drinkApp.autoCompleteText='';
+drinkApp.oneIngredientChange = function(){
+$('#oneIngredient').keypress( function(e){
+
+    let suggestionArray =[];
+    // if ($('#oneIngredient').val()!=='')
+    // {
+        // console.log('hi');
+    const typedChar = String.fromCharCode(e.which);
+    if ($('#oneIngredient').val() === ''){
+        drinkApp.autoCompleteText='';
+    }
+    drinkApp.autoCompleteText+=typedChar;
+    console.log(drinkApp.autoCompleteText);
+
+    drinkApp.autocompleteIngredients(drinkApp.autoCompleteText, suggestionArray);
+        $('#oneIngredient').autocomplete({
+            source: suggestionArray
+        });
+
+    // }
+
+})
+};
+drinkApp.restartEventListener = function (){
+    $('#restartSearchButton').on('click', function(){
+        // $('input[type=checkbox]').prop=false;
+        $("form").trigger("reset");
+        $('.resultDiv').addClass('hidden');
+        $('.moodDiv').removeClass('hidden');
+
+    })
 }
 
 drinkApp.init = function () {
     drinkApp.moodEventListener();
     drinkApp.submitEventListener();
     drinkApp.anotherOptionEventListener();
-    drinkApp.oneIngredientChangeListener();
+    drinkApp.oneIngredientChange();
+    drinkApp.restartEventListener();
+    
+    // drinkApp.autocompleteIngredients($('#oneIngredient').val(),suggestionArray);
+    // console.log(suggestionArray);
+    
+    // drinkApp.oneIngredientChangeListener();
+    // drinkApp.autocompleteIngredients('a');
+    // drinkApp.autoComplete();
 }
 
 $(function () {
     drinkApp.init();
+    
+   
 })

@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link href="https://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
 
@@ -28,7 +29,7 @@
                     <form action="" class="hidden">
                         <label for="oneIngredient">Include this ingredient:</label>
                         <input type="text" name="" id="oneIngredient">
-                        <label for="calories"></label>
+                        <label for="calories">Max Calories</label>
                         <input type="number" name="" id="calories" min="0" max="1000" step="1">
                         <h2>Dietary Restrictions</h2>
                         <input type="checkbox" name="" id="sugar">
@@ -56,6 +57,7 @@
                 </ol>
                 <a target="_blank" href="" id="drinkLink">Click here for more information</a>
                 <button id="anotherDrinkButton">give me another option</button>
+                <button id="restartSearchButton">change up your search</button>
             </div>
         </section>
     </main>
@@ -64,6 +66,8 @@
     </footer>
     <script src='https://code.jquery.com/jquery-3.2.1.min.js'
         integrity='sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=' crossorigin='anonymous'></script>
+<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+<script src="https://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
     <script src="./scripts/script.js"></script>
 </body>
 
