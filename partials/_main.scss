@@ -11,6 +11,31 @@
    z-index: 9999;
    background-image: url('./assets/preloader.gif');
    background-repeat: no-repeat; 
-   //background-color: #FFF;
    background-position: center;
+}
+
+.moodDiv,
+.formTop,
+.formBottom {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 50vh;
+}
+
+.imageContainer {
+    width: 500px;
+}
+
+header {
+    display: flex;
+    height: 20vh;
+    align-items: center;
 }

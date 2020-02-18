@@ -7,10 +7,10 @@ html {
 /* to style the body tag */
 body {
   font-family: $primaryFont;
-  font-size: 2rem;
-  color: $primaryColor;
+  font-size: 1.8rem;
+  color: $bodyTextColor;
   line-height: 2rem;
-  background-color: $accentColor1;
+  background-color: $bodyBackgroundColor;
 }
 
 /* to style the wrapper classes */
@@ -40,17 +40,11 @@ ul {
 /* to style all the links */
 a {
   text-decoration: none;
-  color: $secondaryColor;
+  color: $bodyTextColor;
   font: inherit;
   display: inline-block;
   text-transform: uppercase;
   font-weight: 700;
-}
-
-/* to style all the links when hover or focus  */
-a:hover,
-a:focus {
-  color: $accentColor1;
 }
 
 /* to style all the images */
@@ -62,26 +56,36 @@ img {
 
 /* to style all the buttons */
 button {
-  background-color: $secondaryColor;
-  width: 200px;
-  height: 50px;
+  background-color: $accentColor1;
+  //width: 200px;
+  //height: 50px;
+  padding: 20px;
   font: inherit;
   border: none;
-  border-radius: 10px;
   cursor: pointer;
-  color: $lightColor;
 }
 
 /* to style the buttons when hover or focus */
 button:hover,
 button:focus {
-  background-color: $accentColor2;
-  color: $secondaryColor;
-  box-shadow: 0 0 50px $accentColor2;
+  background-color: $lightColor;
 }
 
 /* to style heading 1 */
 h1 {
-  color: $secondaryColor;
+  font-family: $headingFont;
+  color: $primaryColor;
   line-height: 3.5rem;
+  font-size: 8rem;
+  letter-spacing: 3px;
+  text-shadow: 4px 4px 0 $lightColor;
+  text-transform: uppercase;
+}
+
+h2 {
+  font-family: $headingFont;
+  font-size: 4rem;
+  line-height: 3.5rem;
+  padding-bottom: 10px;
+  text-shadow: 2px 2px 0 $lightColor;
 }

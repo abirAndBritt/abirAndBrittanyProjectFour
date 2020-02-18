@@ -119,7 +119,8 @@ drinkApp.showResult = function () {
 drinkApp.moodEventListener = function() {
     $('.mood').on('click', function(){
         $('form').removeClass('hidden');
-        $('.moodDiv').addClass('hidden');
+        $('#moodDiv').addClass('hidden');
+        $('#moodDiv').removeClass('moodDiv');
         drinkApp.mood = $(this).attr('id');
     })
 }
@@ -180,7 +181,8 @@ drinkApp.restartEventListener = function (){
         // $('input[type=checkbox]').prop=false;
         $("form").trigger("reset");
         $('.resultDiv').addClass('hidden');
-        $('.moodDiv').removeClass('hidden');
+        $('#moodDiv').removeClass('hidden');
+        $('#moodDiv').addClass('moodDiv');
 
     })
 }

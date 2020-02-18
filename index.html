@@ -4,45 +4,51 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Give me a drink!</title>
     <link href="https://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Francois+One|Open+Sans&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="assets/drink-favicon.png">
     <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
     <header>
-        <h1>Give me a drink</h1>
+        <h1>Give me a drink!</h1>
     </header>
     <main>
         <section>
-            <div class="moodDiv">
-
-                
-                    <h2>
-                        what is your mood today?
-                    </h2>
+            <div class="moodDiv" id="moodDiv">
+                <div class="moodText">
+                    <h2>How are you feeling today?</h2>
+                </div>
+                <div class="moodButtons">
                     <button id="coffee" class="mood">sleepy</button>
                     <button id="smoothie" class="mood">in need of a boost</button>
                     <button id="wine" class="mood">it's been a day</button>
+                </div>
+            </div>
+            <form action="" class="hidden">
+                <div class="formTop">
+                    <h2>Customize Your Options</h2>
+                    <label for="oneIngredient">Include this ingredient:</label>
+                    <input type="text" name="" id="oneIngredient">
+                    <label for="calories">Max Calories</label>
+                    <input type="number" name="" id="calories" min="0" max="1000" step="1">
+                </div>
+                <div class="formBottom">
+                    <h2>Dietary Restrictions</h2>
+                    <input type="checkbox" name="" id="sugar">
+                    <label for="sugar">Sugar Free</label>
+                    <input type="checkbox" name="" id="gluten">
+                    <label for="gluten">Gluten-Free</label>
+                    <input type="checkbox" name="" id="dairy">
+                    <label for="dairy">Dairy Free</label>
 
-                    </div>
-                    <form action="" class="hidden">
-                        <label for="oneIngredient">Include this ingredient:</label>
-                        <input type="text" name="" id="oneIngredient">
-                        <label for="calories">Max Calories</label>
-                        <input type="number" name="" id="calories" min="0" max="1000" step="1">
-                        <h2>Dietary Restrictions</h2>
-                        <input type="checkbox" name="" id="sugar">
-                        <label for="sugar">Sugar Free</label>
-                        <input type="checkbox" name="" id="gluten">
-                        <label for="gluten">Gluten-Free</label>
-                        <input type="checkbox" name="" id="dairy">
-                        <label for="dairy">Dairy Free</label>
+                    <button id="submitButton"type="submit">submit</button>
+                </div>
+            </form>
 
-                        <button id="submitButton" type="submit">submit</button>
-                    </form>
-
-                    <div class="preloader hidden"></div>
+            <div class="preloader hidden"></div>
 
             <div class="resultDiv hidden">
                 <h2 id="drinkTitle"></h2>

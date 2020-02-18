@@ -242,11 +242,11 @@ html {
 
 /* to style the body tag */
 body {
-  font-family: "Roboto", sans-serif;
-  font-size: 2rem;
-  color: #555555;
+  font-family: "Open Sans", sans-serif;
+  font-size: 1.8rem;
+  color: #00283A;
   line-height: 2rem;
-  background-color: #55ddff; }
+  background-color: #FEF8E2; }
 
 /* to style the wrapper classes */
 .wrapper {
@@ -272,16 +272,11 @@ ul {
 /* to style all the links */
 a {
   text-decoration: none;
-  color: #2e7a8d;
+  color: #00283A;
   font: inherit;
   display: inline-block;
   text-transform: uppercase;
   font-weight: 700; }
-
-/* to style all the links when hover or focus  */
-a:hover,
-a:focus {
-  color: #55ddff; }
 
 /* to style all the images */
 img {
@@ -291,27 +286,33 @@ img {
 
 /* to style all the buttons */
 button {
-  background-color: #2e7a8d;
-  width: 200px;
-  height: 50px;
+  background-color: #FFDA58;
+  padding: 20px;
   font: inherit;
   border: none;
-  border-radius: 10px;
-  cursor: pointer;
-  color: #fff; }
+  cursor: pointer; }
 
 /* to style the buttons when hover or focus */
 button:hover,
 button:focus {
-  background-color: #fff565;
-  color: #2e7a8d;
-  -webkit-box-shadow: 0 0 50px #fff565;
-  box-shadow: 0 0 50px #fff565; }
+  background-color: #F49C7F; }
 
 /* to style heading 1 */
 h1 {
-  color: #2e7a8d;
-  line-height: 3.5rem; }
+  font-family: "Francois One", sans-serif;
+  color: #F05924;
+  line-height: 3.5rem;
+  font-size: 8rem;
+  letter-spacing: 3px;
+  text-shadow: 4px 4px 0 #F49C7F;
+  text-transform: uppercase; }
+
+h2 {
+  font-family: "Francois One", sans-serif;
+  font-size: 4rem;
+  line-height: 3.5rem;
+  padding-bottom: 10px;
+  text-shadow: 2px 2px 0 #F49C7F; }
 
 .hidden {
   display: none; }
@@ -326,3 +327,45 @@ h1 {
   background-image: url("./assets/preloader.gif");
   background-repeat: no-repeat;
   background-position: center; }
+
+.moodDiv,
+.formTop,
+.formBottom {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center; }
+
+form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  height: 50vh; }
+
+.imageContainer {
+  width: 500px; }
+
+header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 20vh;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center; }
