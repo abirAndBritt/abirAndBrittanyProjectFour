@@ -23,7 +23,7 @@ drinkApp.apiCall = function (queryString,oneIngredient ,calories, sugar, gluten,
 
     }).then(function (result) {
         
-        $('.preloader').fadeOut('slow');
+        $('.preloader').fadeOut('fast');
         drinkApp.drinks = result.results;
         if (drinkApp.drinks.length !== 0) {
             $('.resultDiv').removeClass('hidden');

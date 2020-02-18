@@ -328,6 +328,18 @@ h2 {
   background-repeat: no-repeat;
   background-position: center; }
 
+.moodButtons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between; }
+  .moodButtons > div {
+    text-align: center; }
+    .moodButtons > div img {
+      margin-bottom: 4%; }
+
 .moodDiv,
 .formTop,
 .formBottom {

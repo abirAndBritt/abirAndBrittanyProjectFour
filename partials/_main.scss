@@ -13,7 +13,16 @@
    background-repeat: no-repeat; 
    background-position: center;
 }
-
+.moodButtons{
+    display: flex;
+    justify-content: space-between;
+    >div {
+        text-align: center;
+        img{
+            margin-bottom: 4%;
+        }
+    }
+}
 .moodDiv,
 .formTop,
 .formBottom {
