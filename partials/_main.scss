@@ -13,7 +13,22 @@
    background-repeat: no-repeat; 
    background-position: center;
 }
-
+.slideOutLeft {
+	-webkit-animation: slideOutLeft 0.8s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+	        animation: slideOutLeft 0.8s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+}
+.slideInRight {
+	-webkit-animation: slideInRight 0.8s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+	        animation: slideInRight 0.8s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+.fadeInFwd {
+	-webkit-animation: fadeInFwd 5s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+	        animation: fadeInFwd 5s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+}
+.slide-in-bottom {
+	-webkit-animation: slide-in-bottom 0.8s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+	        animation: slide-in-bottom 0.8s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
 header {
     display: flex;
     min-height: 20vh;
@@ -35,9 +50,10 @@ header {
 .moodDiv,
 .formTop,
 .formBottom {
-    display: flex;
+    // display: flex;
     flex-direction: column;
     align-items: center;
+    text-align: center;
 }
 
 form {
