@@ -13,11 +13,20 @@
    background-repeat: no-repeat; 
    background-position: center;
 }
+
+header {
+    display: flex;
+    min-height: 20vh;
+    align-items: center;
+    justify-content: center;
+}
+
 .moodButtons{
     display: flex;
     justify-content: space-between;
-    >div {
+    div {
         text-align: center;
+        max-height: 200px;
         img{
             margin-bottom: 4%;
         }
@@ -39,12 +48,105 @@ form {
     height: 50vh;
 }
 
-.imageContainer {
-    width: 500px;
+.formTop {
+    padding-bottom: 4%;
+
+    h2 {
+        padding-bottom: 4%;
+    }
+
+    label {
+        margin: 0 5px;
+    }
+
+    .inputContainer {
+        display: flex;
+        justify-content: center;
+    }
+    #calories {
+        width: 10%;
+    }
 }
 
-header {
+.formBottom {
     display: flex;
-    height: 20vh;
-    align-items: center;
+
+    h2 {
+        padding-bottom: 4%;
+    }
+
+    label {
+        margin: 0 5px;
+    }
+
+    .checkboxContainer {
+        padding-bottom: 7%;
+    }
+
+    button {
+        width: 300px;
+        background: $accentColor2;
+        color: white;
+        border: 3px solid $accentColor2;
+    }
+
+    button:hover,
+    button:focus {
+        background: $accentColor3;
+    }
+}
+
+// Recipe styles start here
+
+.imageContainer {
+    max-width: 312px;
+}
+
+h3 {
+    text-shadow: 2px 2px 0 $accentColor3;
+}
+
+.recipeContainer {
+    margin: 0 30px;
+
+    ul li:before {
+        content: "·";
+        font-size: 25px;
+        vertical-align: middle;
+        line-height: 20px;
+        padding-right: 10px;
+        color: $primaryColor;
+    
+    }
+
+    a {
+        color: $accentColor2;
+        text-decoration: none;
+        font-size: 1.5rem;
+        font-style: italic;
+    }
+
+    a:hover {
+        color: $accentColor3;
+    }
+}
+
+.buttonContainer {
+    margin: 40px auto;
+    display: flex;
+    justify-content: center;
+
+    button {
+        margin: 0 5px;
+    }
+
+    #restartSearchButton {
+        background: $accentColor2;
+        color: white;
+    }
+
+    #restartSearchButton:hover,
+    #restartSearchButton:focus {
+        background: $accentColor3;
+    }
 }

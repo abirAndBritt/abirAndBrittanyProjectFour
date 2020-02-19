@@ -1,3 +1,4 @@
+@charset "UTF-8";
 html {
   line-height: 1.15;
   -ms-text-size-adjust: 100%;
@@ -255,7 +256,9 @@ body {
   width: 60%; }
 
 /* to reset the margin and padding for some elements */
-h1 ul,
+h1,
+h2,
+ul,
 img,
 body,
 p,
@@ -269,15 +272,6 @@ button {
 ul {
   list-style: none; }
 
-/* to style all the links */
-a {
-  text-decoration: none;
-  color: #00283A;
-  font: inherit;
-  display: inline-block;
-  text-transform: uppercase;
-  font-weight: 700; }
-
 /* to style all the images */
 img {
   max-width: 100%;
@@ -287,6 +281,7 @@ img {
 /* to style all the buttons */
 button {
   background-color: #FFDA58;
+  color: #00283A;
   padding: 20px;
   font: inherit;
   border: none;
@@ -301,7 +296,7 @@ button:focus {
 h1 {
   font-family: "Francois One", sans-serif;
   color: #F05924;
-  line-height: 3.5rem;
+  line-height: 7.5rem;
   font-size: 8rem;
   letter-spacing: 3px;
   text-shadow: 4px 4px 0 #F49C7F;
@@ -311,8 +306,12 @@ h2 {
   font-family: "Francois One", sans-serif;
   font-size: 4rem;
   line-height: 3.5rem;
-  padding-bottom: 10px;
-  text-shadow: 2px 2px 0 #F49C7F; }
+  text-shadow: 2px 2px 0 #F49C7F;
+  padding-bottom: 10px; }
+
+h3 {
+  font-family: "Francois One", sans-serif;
+  font-size: 3rem; }
 
 .hidden {
   display: none; }
@@ -328,6 +327,18 @@ h2 {
   background-repeat: no-repeat;
   background-position: center; }
 
+header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  min-height: 20vh;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center; }
+
 .moodButtons {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -335,9 +346,10 @@ h2 {
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
   justify-content: space-between; }
-  .moodButtons > div {
-    text-align: center; }
-    .moodButtons > div img {
+  .moodButtons div {
+    text-align: center;
+    max-height: 200px; }
+    .moodButtons div img {
       margin-bottom: 4%; }
 
 .moodDiv,
@@ -370,14 +382,77 @@ form {
   justify-content: center;
   height: 50vh; }
 
-.imageContainer {
-  width: 500px; }
+.formTop {
+  padding-bottom: 4%; }
+  .formTop h2 {
+    padding-bottom: 4%; }
+  .formTop label {
+    margin: 0 5px; }
+  .formTop .inputContainer {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center; }
+  .formTop #calories {
+    width: 10%; }
 
-header {
+.formBottom {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; }
+  .formBottom h2 {
+    padding-bottom: 4%; }
+  .formBottom label {
+    margin: 0 5px; }
+  .formBottom .checkboxContainer {
+    padding-bottom: 7%; }
+  .formBottom button {
+    width: 300px;
+    background: #aeadf0;
+    color: white;
+    border: 3px solid #aeadf0; }
+  .formBottom button:hover,
+  .formBottom button:focus {
+    background: #d8dcff; }
+
+.imageContainer {
+  max-width: 312px; }
+
+h3 {
+  text-shadow: 2px 2px 0 #d8dcff; }
+
+.recipeContainer {
+  margin: 0 30px; }
+  .recipeContainer ul li:before {
+    content: "·";
+    font-size: 25px;
+    vertical-align: middle;
+    line-height: 20px;
+    padding-right: 10px;
+    color: #F05924; }
+  .recipeContainer a {
+    color: #aeadf0;
+    text-decoration: none;
+    font-size: 1.5rem;
+    font-style: italic; }
+  .recipeContainer a:hover {
+    color: #d8dcff; }
+
+.buttonContainer {
+  margin: 40px auto;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  height: 20vh;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center; }
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center; }
+  .buttonContainer button {
+    margin: 0 5px; }
+  .buttonContainer #restartSearchButton {
+    background: #aeadf0;
+    color: white; }
+  .buttonContainer #restartSearchButton:hover,
+  .buttonContainer #restartSearchButton:focus {
+    background: #d8dcff; }

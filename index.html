@@ -7,7 +7,7 @@
     <title>Give me a drink!</title>
     <link href="https://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Francois+One|Open+Sans&display=swap" rel="stylesheet">
-    <link rel="icon" type="image/x-icon" href="assets/drink-favicon.png">
+    <link rel="icon" type="image/x-icon" href="assets/drinkFavicon.png">
     <link rel="stylesheet" href="styles.css">
 </head>
 
@@ -23,62 +23,71 @@
                 </div>
                 <div class="moodButtons">
                     <div>
-                        <img src="./assets/sleepy.png" alt="sleepy egg falling of toast">
-                        <button id="coffee" class="mood">sleepy</button>
+                        <img src="./assets/sleepy2.png" alt="sleepy egg falling of toast">
+                        <button id="coffee" class="mood">A little sleepy</button>
                     </div>
                    <div>
-                        <img src="./assets/boost.png" alt="tired egg holding his head">
-                        <button id="smoothie" class="mood">in need of a boost</button>
+                        <img src="./assets/boost2.png" alt="tired egg holding his head">
+                        <button id="smoothie" class="mood">In need of a boost</button>
                    </div>
                   <div>
-                        <img src="./assets/wine.png" alt="happy egg holding pink balloon">
-                        <button id="wine" class="mood">it's been a day</button>
+                        <img src="./assets/wine2.png" alt="happy egg holding pink balloon">
+                        <button id="wine" class="mood">Ready to party</button>
                   </div>
                 </div>
             </div>
             <form action="" class="hidden">
                 <div class="formTop">
                     <h2>Customize Your Options</h2>
-                    <label for="oneIngredient">Include this ingredient:</label>
-                    <input type="text" name="" id="oneIngredient">
-                    <label for="calories">Max Calories</label>
-                    <input type="number" name="" id="calories" min="0" max="1000" step="1">
+                    <div class="inputContainer">
+                        <label for="oneIngredient">Include this ingredient: </label>
+                        <input type="text" name="" id="oneIngredient">
+                        <label for="calories">Max Calories: </label>
+                        <input type="number" name="" id="calories" min="0" max="1000" step="1">
+                    </div>
                 </div>
                 <div class="formBottom">
                     <h2>Dietary Restrictions</h2>
-                    <input type="checkbox" name="" id="sugar">
-                    <label for="sugar">Sugar Free</label>
-                    <input type="checkbox" name="" id="gluten">
-                    <label for="gluten">Gluten-Free</label>
-                    <input type="checkbox" name="" id="dairy">
-                    <label for="dairy">Dairy Free</label>
+                    <div class="checkboxContainer">
+                        <input type="checkbox" name="" id="sugar">
+                        <label for="sugar">Sugar-Free</label>
+                        <input type="checkbox" name="" id="gluten">
+                        <label for="gluten">Gluten-Free</label>
+                        <input type="checkbox" name="" id="dairy">
+                        <label for="dairy">Dairy-Free</label>
+                    </div>
 
-                    <button id="submitButton"type="submit">submit</button>
+                    <button id="submitButton"type="submit">Submit</button>
                 </div>
             </form>
 
             <div class="preloader hidden"></div>
 
             <div class="resultDiv hidden">
-                <h2 id="drinkTitle"></h2>
-                <!-- add image container with max width -->
-                <img src="" alt="" id="drinkImage">
-                <h3>Ingredients</h3>
-                <ul class="ingredients">
+                <div class="recipeContainer">
+                    <h2 id="drinkTitle"></h2>
+                    <div class="imageContainer">
+                        <img src="" alt="" id="drinkImage">
+                    </div>
+                    <h3>Ingredients</h3>
+                    <ul class="ingredients">
 
-                </ul>
-                <h3>Instructions</h3>
-                <ol class="instructions">
+                    </ul>
+                    <h3>Instructions</h3>
+                    <ol class="instructions">
 
-                </ol>
-                <a target="_blank" href="" id="drinkLink">Click here for more information</a>
-                <button id="anotherDrinkButton">give me another option</button>
-                <button id="restartSearchButton">change up your search</button>
+                    </ol>
+                    <a target="_blank" href="" id="drinkLink">Want more information? Click here!</a>
+                </div>
+                <div class="buttonContainer">
+                    <button id="anotherDrinkButton">Give me another option</button>
+                    <button id="restartSearchButton">Change up your search</button>
+                </div>
             </div>
         </section>
     </main>
     <footer>
-
+        <!-- <p>Copyright © 2020. Made by Abir Halwa and Brittany Giles </p> -->
     </footer>
     <script src='https://code.jquery.com/jquery-3.2.1.min.js'
         integrity='sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=' crossorigin='anonymous'></script>
