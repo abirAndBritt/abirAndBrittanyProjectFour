@@ -1,11 +1,13 @@
+// class of hidden to hide elements/sections
 .hidden {
     display: none;
 }
 
+// styles for the preloader coffee cup animation
 .preloader {
    position: absolute;
-   top: 30%;
-   left: 30%;
+   top: 35%;
+   left: 35%;
    width: 30%;
    height: 30%;
    z-index: 9999;
@@ -13,6 +15,7 @@
    background-repeat: no-repeat; 
    background-position: center;
 }
+
 .slideOutLeft {
 	-webkit-animation: slideOutLeft 0.8s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
 	        animation: slideOutLeft 0.8s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
@@ -29,6 +32,8 @@
 	-webkit-animation: slide-in-bottom 0.8s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
 	        animation: slide-in-bottom 0.8s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
 }
+
+// justifying the content of the header
 header {
     display: flex;
     min-height: 20vh;
@@ -36,6 +41,7 @@ header {
     justify-content: center;
 }
 
+// styling the mood buttons on the main page
 .moodButtons{
     display: flex;
     justify-content: space-between;
@@ -45,12 +51,18 @@ header {
         img{
             margin-bottom: 4%;
         }
+        button {
+            width: 250px;
+        }
     }
 }
-.moodDiv,
+
+.moodDiv {
+    text-align: center;
+}
 .formTop,
 .formBottom {
-    // display: flex;
+    // // display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
@@ -68,7 +80,7 @@ form {
     padding-bottom: 4%;
 
     h2 {
-        padding-bottom: 4%;
+        padding: 6% 0;
     }
 
     label {
@@ -77,10 +89,16 @@ form {
 
     .inputContainer {
         display: flex;
+        flex-direction: column;
         justify-content: center;
     }
+
     #calories {
-        width: 10%;
+        width: 20%;
+    }
+
+    .flexChild {
+        padding-bottom: 5%;
     }
 }
 
@@ -88,7 +106,7 @@ form {
     display: flex;
 
     h2 {
-        padding-bottom: 4%;
+        padding-bottom: 6%;
     }
 
     label {
@@ -136,14 +154,14 @@ h3 {
     }
 
     a {
-        color: $accentColor2;
+        color: $primaryColor;
         text-decoration: none;
         font-size: 1.5rem;
         font-style: italic;
     }
 
     a:hover {
-        color: $accentColor3;
+        color: $lightColor;
     }
 }
 
@@ -154,15 +172,5 @@ h3 {
 
     button {
         margin: 0 5px;
-    }
-
-    #restartSearchButton {
-        background: $accentColor2;
-        color: white;
-    }
-
-    #restartSearchButton:hover,
-    #restartSearchButton:focus {
-        background: $accentColor3;
     }
 }

@@ -1,12 +1,12 @@
 //namespace
 const drinkApp = {};
-//a global variable to hold the drinks array
+// a global variable to hold the drinks array
 drinkApp.drinks;
 // a global variable to hold the selected mood
 drinkApp.mood;
-// a global variable to hold the text that will be autocompleted 
+// a global variable to hold the text that will be autocompleted in ingredient field of form
 drinkApp.autoCompleteText = '';
-//a function to make the call to api based on the search criteria
+// a function to make the call to api based on the search criteria
 drinkApp.getDrinks = function (queryString, oneIngredient, calories, sugar, gluten, dairy) {
     $.ajax({
         url: 'https://api.spoonacular.com/recipes/complexSearch',
@@ -106,7 +106,7 @@ drinkApp.anotherOptionEventListener = function () {
     });
 }
 
-// a function to show the drinks information
+// a function to show the drink information
 drinkApp.showResult = function () {
     console.log('hi');
     if (drinkApp.drinks.length > 0) {
@@ -124,7 +124,7 @@ drinkApp.showResult = function () {
     }
 }
 
-//an event listener to the mood button
+// an event listener for the mood button
 drinkApp.moodEventListener = function () {
     $('.mood').on('click', function () {
 
@@ -167,12 +167,12 @@ drinkApp.submitEventListener = function () {
             if ($('#dairy').prop('checked') === true) {
                 dairy = $('#dairy').attr('id');
             }
-            // drinkApp.getDrinks(drinkApp.mood, oneIngredient, calories, sugar, gluten, dairy);
+            drinkApp.getDrinks(drinkApp.mood, oneIngredient, calories, sugar, gluten, dairy);
         }, 2000);
     });
 }
 
-// an event listener to a keypress in the search by ingredient to apply autocomplete on it
+// an event listener for a keypress in the search by ingredient to apply autocomplete on it
 drinkApp.oneIngredientChange = function () {
     $('#oneIngredient').keypress(function (e) {
         let suggestionArray = [];

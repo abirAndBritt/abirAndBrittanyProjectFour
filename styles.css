@@ -278,7 +278,7 @@ img {
   display: block;
   height: auto; }
 
-/* to style all the buttons */
+/* general button styles */
 button {
   background-color: #FFDA58;
   color: #00283A;
@@ -442,8 +442,8 @@ h3 {
 
 .preloader {
   position: absolute;
-  top: 30%;
-  left: 30%;
+  top: 35%;
+  left: 35%;
   width: 30%;
   height: 30%;
   z-index: 9999;
@@ -491,8 +491,12 @@ header {
     max-height: 200px; }
     .moodButtons div img {
       margin-bottom: 4%; }
+    .moodButtons div button {
+      width: 250px; }
 
-.moodDiv,
+.moodDiv {
+  text-align: center; }
+
 .formTop,
 .formBottom {
   -webkit-box-orient: vertical;
@@ -523,25 +527,31 @@ form {
 .formTop {
   padding-bottom: 4%; }
   .formTop h2 {
-    padding-bottom: 4%; }
+    padding: 6% 0; }
   .formTop label {
     margin: 0 5px; }
   .formTop .inputContainer {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
     -webkit-box-pack: center;
     -ms-flex-pack: center;
     justify-content: center; }
   .formTop #calories {
-    width: 10%; }
+    width: 20%; }
+  .formTop .flexChild {
+    padding-bottom: 5%; }
 
 .formBottom {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex; }
   .formBottom h2 {
-    padding-bottom: 4%; }
+    padding-bottom: 6%; }
   .formBottom label {
     margin: 0 5px; }
   .formBottom .checkboxContainer {
@@ -571,12 +581,12 @@ h3 {
     padding-right: 10px;
     color: #F05924; }
   .recipeContainer a {
-    color: #aeadf0;
+    color: #F05924;
     text-decoration: none;
     font-size: 1.5rem;
     font-style: italic; }
   .recipeContainer a:hover {
-    color: #d8dcff; }
+    color: #F49C7F; }
 
 .buttonContainer {
   margin: 40px auto;
@@ -588,9 +598,3 @@ h3 {
   justify-content: center; }
   .buttonContainer button {
     margin: 0 5px; }
-  .buttonContainer #restartSearchButton {
-    background: #aeadf0;
-    color: white; }
-  .buttonContainer #restartSearchButton:hover,
-  .buttonContainer #restartSearchButton:focus {
-    background: #d8dcff; }
