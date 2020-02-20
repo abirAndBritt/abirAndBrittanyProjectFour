@@ -12,77 +12,72 @@
 </head>
 
 <body>
-    <header>
+    <header class="wrapper">
         <h1>Give me a drink!</h1>
     </header>
     <main class="wrapper">
         <section>
             <div class="moodDiv" id="moodDiv">
-                <div class="moodText">
-                    <h2>How are you feeling today?</h2>
-                </div>
-                <div class="moodButtons">
-                    <div>
-                        <img src="./assets/sleepy2.png" alt="sleepy egg falling of toast">
+                <h2>How are you feeling today?</h2>
+                <ul class="moodButtons">
+                    <li>
+                        <img src="./assets/sleepy.png" alt="sleepy egg falling of toast">
                         <button id="coffee" class="mood">A little sleepy</button>
-                    </div>
-                   <div>
-                        <img src="./assets/boost2.png" alt="tired egg holding his head">
+                    </li>
+                    <li>
+                        <img src="./assets/boost.png" alt="tired egg holding his head">
                         <button id="smoothie" class="mood">In need of a boost</button>
-                   </div>
-                  <div>
-                        <img src="./assets/wine2.png" alt="happy egg holding pink balloon">
+                    </li>
+                    <li>
+                        <img src="./assets/wine.png" alt="happy egg holding pink balloon">
                         <button id="wine" class="mood">Ready to party</button>
-                  </div>
-                </div>
+                    </li>
+                </ul>
             </div>
             <form action="" class="hidden">
-                <div class="formTop">
-                    <h2>Customize Your Options</h2>
-                    <div class="inputContainer">
-                        <div class="flexChild">
-                            <label for="oneIngredient">Include this ingredient: </label>
-                            <input type="text" name="" id="oneIngredient">
-                        </div>
-                        <div class="flexChild">
-                            <label for="calories">Max Calories: </label>
-                            <input type="number" name="" id="calories" min="0" max="1000" step="1">
-                        </div>
-                    </div>
+                <h2>Customize Your Options</h2>
+                <div class="formChild">
+                    <label for="oneIngredient">Include this ingredient: </label>
+                    <input type="text" name="" id="oneIngredient">
                 </div>
-                <div class="formBottom">
-                    <h2>Dietary Restrictions</h2>
-                    <div class="checkboxContainer">
+                <div class="formChild">
+                    <label for="calories">Max Calories: </label>
+                    <input type="number" name="" id="calories" min="0" max="1000" step="1">
+                </div>
+                <h2>Dietary Restrictions</h2>
+                <div class="checkboxContainer">
+                    <div>
                         <input type="checkbox" name="" id="sugar">
                         <label for="sugar">Sugar-Free</label>
+                    </div>
+                    <div>
                         <input type="checkbox" name="" id="gluten">
                         <label for="gluten">Gluten-Free</label>
+                    </div>
+                    <div>
                         <input type="checkbox" name="" id="dairy">
                         <label for="dairy">Dairy-Free</label>
                     </div>
-
-                    <button id="submitButton"type="submit">Submit</button>
                 </div>
+
+                <button id="submitButton" type="submit">Submit</button>
             </form>
 
             <div class="preloader hidden"></div>
-
             <div class="resultDiv hidden">
-                <div class="recipeContainer">
-                    <h2 id="drinkTitle"></h2>
-                    <div class="imageContainer">
-                        <img src="" alt="" id="drinkImage">
-                    </div>
-                    <h3>Ingredients</h3>
-                    <ul class="ingredients">
-
-                    </ul>
-                    <h3>Instructions</h3>
-                    <ol class="instructions">
-
-                    </ol>
-                    <a target="_blank" href="" id="drinkLink">Want more information? Click here!</a>
+                <h2 id="drinkTitle"></h2>
+                <div class="imageContainer">
+                    <img src="" alt="" id="drinkImage">
                 </div>
+                <h3>Ingredients</h3>
+                <ul class="ingredients">
+
+                </ul>
+                <h3>Instructions</h3>
+                <ol class="instructions">
+
+                </ol>
+                <a target="_blank" href="" id="drinkLink">Want more information? Click here!</a>
                 <div class="buttonContainer">
                     <button id="anotherDrinkButton">Give me another option</button>
                     <button id="restartSearchButton">Change up your search</button>
@@ -91,13 +86,12 @@
         </section>
     </main>
     <footer>
-        <!-- <p>Copyright © 2020. Made by Abir Halwa and Brittany Giles </p> -->
+        <p>Copyright <span class="srOnly">©</span> 2020. Made by Abir Halwa and Brittany Giles </p>
     </footer>
     <script src='https://code.jquery.com/jquery-3.2.1.min.js'
         integrity='sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=' crossorigin='anonymous'></script>
-<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
-<script src="https://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+    <script src="https://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
     <script src="./scripts/script.js"></script>
 </body>
-
 </html>

@@ -7,21 +7,14 @@ html {
 body {
   margin: 0; }
 
-article,
-aside,
-footer,
-header,
-nav,
-section {
+article, aside, footer, header, nav, section {
   display: block; }
 
 h1 {
   font-size: 2em;
-  margin: 0.67em 0; }
+  margin: .67em 0; }
 
-figcaption,
-figure,
-main {
+figcaption, figure, main {
   display: block; }
 
 figure {
@@ -34,7 +27,7 @@ hr {
   overflow: visible; }
 
 pre {
-  font-family: monospace, monospace;
+  font-family: monospace,monospace;
   font-size: 1em; }
 
 a {
@@ -47,18 +40,14 @@ abbr[title] {
   -webkit-text-decoration: underline dotted;
   text-decoration: underline dotted; }
 
-b,
-strong {
+b, strong {
   font-weight: inherit; }
 
-b,
-strong {
+b, strong {
   font-weight: bolder; }
 
-code,
-kbd,
-samp {
-  font-family: monospace, monospace;
+code, kbd, samp {
+  font-family: monospace,monospace;
   font-size: 1em; }
 
 dfn {
@@ -71,21 +60,19 @@ mark {
 small {
   font-size: 80%; }
 
-sub,
-sup {
+sub, sup {
   font-size: 75%;
   line-height: 0;
   position: relative;
   vertical-align: baseline; }
 
 sub {
-  bottom: -0.25em; }
+  bottom: -.25em; }
 
 sup {
-  top: -0.5em; }
+  top: -.5em; }
 
-audio,
-video {
+audio, video {
   display: inline-block; }
 
 audio:not([controls]) {
@@ -98,45 +85,30 @@ img {
 svg:not(:root) {
   overflow: hidden; }
 
-button,
-input,
-optgroup,
-select,
-textarea {
+button, input, optgroup, select, textarea {
   font-family: sans-serif;
   font-size: 100%;
   line-height: 1.15;
   margin: 0; }
 
-button,
-input {
+button, input {
   overflow: visible; }
 
-button,
-select {
+button, select {
   text-transform: none; }
 
-button,
-html [type="button"],
-[type="reset"],
-[type="submit"] {
+button, html [type=button], [type=reset], [type=submit] {
   -webkit-appearance: button; }
 
-button::-moz-focus-inner,
-[type="button"]::-moz-focus-inner,
-[type="reset"]::-moz-focus-inner,
-[type="submit"]::-moz-focus-inner {
+button::-moz-focus-inner, [type=button]::-moz-focus-inner, [type=reset]::-moz-focus-inner, [type=submit]::-moz-focus-inner {
   border-style: none;
   padding: 0; }
 
-button:-moz-focusring,
-[type="button"]:-moz-focusring,
-[type="reset"]:-moz-focusring,
-[type="submit"]:-moz-focusring {
+button:-moz-focusring, [type=button]:-moz-focusring, [type=reset]:-moz-focusring, [type=submit]:-moz-focusring {
   outline: 1px dotted ButtonText; }
 
 fieldset {
-  padding: 0.35em 0.75em 0.625em; }
+  padding: .35em .75em .625em; }
 
 legend {
   -webkit-box-sizing: border-box;
@@ -154,30 +126,26 @@ progress {
 textarea {
   overflow: auto; }
 
-[type="checkbox"],
-[type="radio"] {
+[type=checkbox], [type=radio] {
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
   padding: 0; }
 
-[type="number"]::-webkit-inner-spin-button,
-[type="number"]::-webkit-outer-spin-button {
+[type=number]::-webkit-inner-spin-button, [type=number]::-webkit-outer-spin-button {
   height: auto; }
 
-[type="search"] {
+[type=search] {
   -webkit-appearance: textfield;
   outline-offset: -2px; }
 
-[type="search"]::-webkit-search-cancel-button,
-[type="search"]::-webkit-search-decoration {
+[type=search]::-webkit-search-cancel-button, [type=search]::-webkit-search-decoration {
   -webkit-appearance: none; }
 
 ::-webkit-file-upload-button {
   -webkit-appearance: button;
   font: inherit; }
 
-details,
-menu {
+details, menu {
   display: block; }
 
 summary {
@@ -196,7 +164,7 @@ template {
   visibility: hidden;
   display: block;
   font-size: 0;
-  content: "";
+  content: '';
   clear: both;
   height: 0; }
 
@@ -205,9 +173,7 @@ html {
   -webkit-box-sizing: border-box;
   box-sizing: border-box; }
 
-*,
-*:before,
-*:after {
+*, *:before, *:after {
   -webkit-box-sizing: inherit;
   box-sizing: inherit; }
 
@@ -222,19 +188,6 @@ html {
   -webkit-clip-path: inset(100%);
   clip-path: inset(100%);
   clip: rect(0 0 0 0);
-  overflow: hidden; }
-
-.visuallyHidden:not(:focus):not(:active) {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-  border: 0;
-  padding: 0;
-  white-space: nowrap;
-  -webkit-clip-path: inset(100%);
-  clip-path: inset(100%);
-  clip: rect(0 0 0);
   overflow: hidden; }
 
 /*  to set the base font-size */
@@ -258,13 +211,15 @@ body {
 /* to reset the margin and padding for some elements */
 h1,
 h2,
+h3,
 ul,
+ol,
 img,
-body,
 p,
-textarea,
 form,
-button {
+button,
+input,
+body {
   margin: 0;
   padding: 0; }
 
@@ -278,11 +233,22 @@ img {
   display: block;
   height: auto; }
 
+a {
+  color: #F05924;
+  text-decoration: none;
+  font-size: 1.5rem;
+  font-style: italic;
+  display: inline-block; }
+
+a:hover, a:focus {
+  color: #F49C7F; }
+
 /* general button styles */
 button {
   background-color: #FFDA58;
   color: #00283A;
-  padding: 20px;
+  width: 250px;
+  height: 60px;
   font: inherit;
   border: none;
   cursor: pointer; }
@@ -296,7 +262,7 @@ button:focus {
 h1 {
   font-family: "Francois One", sans-serif;
   color: #F05924;
-  line-height: 7.5rem;
+  line-height: 9rem;
   font-size: 8rem;
   letter-spacing: 3px;
   text-shadow: 4px 4px 0 #F49C7F;
@@ -305,13 +271,35 @@ h1 {
 h2 {
   font-family: "Francois One", sans-serif;
   font-size: 4rem;
-  line-height: 3.5rem;
-  text-shadow: 2px 2px 0 #F49C7F;
-  padding-bottom: 10px; }
+  line-height: 5rem;
+  text-shadow: 2px 2px 0 #F49C7F; }
 
 h3 {
   font-family: "Francois One", sans-serif;
-  font-size: 3rem; }
+  font-size: 3rem;
+  line-height: 4rem;
+  text-shadow: 2px 2px 0 #d8dcff; }
+
+header {
+  padding: 5vh 0;
+  text-align: center;
+  min-height: 15vh; }
+
+.slideOutLeft {
+  -webkit-animation: slideOutLeft 0.8s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
+  animation: slideOutLeft 0.8s cubic-bezier(0.55, 0.085, 0.68, 0.53) both; }
+
+.slideInRight {
+  -webkit-animation: slideInRight 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  animation: slideInRight 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94) both; }
+
+.slideInBottom {
+  -webkit-animation: slideInBottom 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  animation: slideInBottom 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94) both; }
+
+.slide-out-top {
+  -webkit-animation: slide-out-top 0.8s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
+  animation: slide-out-top 0.8s cubic-bezier(0.55, 0.085, 0.68, 0.53) both; }
 
 /* ----------------------------------------------
  * Generated by Animista on 2020-2-19 16:38:5
@@ -321,7 +309,7 @@ h3 {
  * ---------------------------------------------- */
 /**
  * ----------------------------------------
- * animation slide-out-left
+ * animation slideOutLeft
  * ----------------------------------------
  */
 @-webkit-keyframes slideOutLeft {
@@ -352,7 +340,7 @@ h3 {
  * ---------------------------------------------- */
 /**
  * ----------------------------------------
- * animation slide-in-right
+ * animation slideInRight
  * ----------------------------------------
  */
 @-webkit-keyframes slideInRight {
@@ -376,37 +364,6 @@ h3 {
     opacity: 1; } }
 
 /* ----------------------------------------------
- * Generated by Animista on 2020-2-19 17:0:21
- * Licensed under FreeBSD License.
- * See http://animista.net/license for more info. 
- * w: http://animista.net, t: @cssanimista
- * ---------------------------------------------- */
-/**
- * ----------------------------------------
- * animation fade-in-fwd
- * ----------------------------------------
- */
-@-webkit-keyframes fadeInFwd {
-  0% {
-    -webkit-transform: translateZ(-80px);
-    transform: translateZ(-80px);
-    opacity: 0; }
-  100% {
-    -webkit-transform: translateZ(0);
-    transform: translateZ(0);
-    opacity: 1; } }
-
-@keyframes fadeInFwd {
-  0% {
-    -webkit-transform: translateZ(-80px);
-    transform: translateZ(-80px);
-    opacity: 0; }
-  100% {
-    -webkit-transform: translateZ(0);
-    transform: translateZ(0);
-    opacity: 1; } }
-
-/* ----------------------------------------------
  * Generated by Animista on 2020-2-19 17:11:26
  * Licensed under FreeBSD License.
  * See http://animista.net/license for more info. 
@@ -414,10 +371,10 @@ h3 {
  * ---------------------------------------------- */
 /**
  * ----------------------------------------
- * animation slide-in-bottom
+ * animation slideInBottom
  * ----------------------------------------
  */
-@-webkit-keyframes slide-in-bottom {
+@-webkit-keyframes slideInBottom {
   0% {
     -webkit-transform: translateY(1000px);
     transform: translateY(1000px);
@@ -427,7 +384,7 @@ h3 {
     transform: translateY(0);
     opacity: 1; } }
 
-@keyframes slide-in-bottom {
+@keyframes slideInBottom {
   0% {
     -webkit-transform: translateY(1000px);
     transform: translateY(1000px);
@@ -436,165 +393,176 @@ h3 {
     -webkit-transform: translateY(0);
     transform: translateY(0);
     opacity: 1; } }
+
+/* ----------------------------------------------
+ * Generated by Animista on 2020-2-19 21:56:42
+ * Licensed under FreeBSD License.
+ * See http://animista.net/license for more info. 
+ * w: http://animista.net, t: @cssanimista
+ * ---------------------------------------------- */
+/**
+ * ----------------------------------------
+ * animation slide-out-top
+ * ----------------------------------------
+ */
+@-webkit-keyframes slideOutTop {
+  0% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+    opacity: 1; }
+  100% {
+    -webkit-transform: translateY(-1000px);
+    transform: translateY(-1000px);
+    opacity: 0; } }
+
+@keyframes slideOutTop {
+  0% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+    opacity: 1; }
+  100% {
+    -webkit-transform: translateY(-1000px);
+    transform: translateY(-1000px);
+    opacity: 0; } }
+
+main {
+  min-height: 66vh; }
+
+.moodDiv {
+  text-align: center; }
+  .moodDiv h2 {
+    margin-bottom: 5vh; }
+  .moodDiv .moodButtons {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center; }
+    .moodDiv .moodButtons li:not(:last-child) {
+      margin-right: 3%; }
+    .moodDiv .moodButtons li img {
+      margin-bottom: 4%; }
 
 .hidden {
   display: none; }
+
+form {
+  text-align: center; }
+  form > *:not(:last-child) {
+    margin-bottom: 3vh; }
+  form .formChild label {
+    display: inline-block;
+    width: 200px; }
+  form .formChild input {
+    height: 30px;
+    padding-left: 1%; }
+  form .formChild:nth-of-type(2) {
+    margin-bottom: 7vh; }
+  form .checkboxContainer {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin-bottom: 7vh; }
+    form .checkboxContainer div:not(:last-child) {
+      margin-right: 4%; }
+  form button {
+    background: #aeadf0;
+    color: white;
+    border: 3px solid; }
+  form button:hover,
+  form button:focus {
+    background: #d8dcff; }
 
 .preloader {
   position: absolute;
   top: 35%;
   left: 35%;
   width: 30%;
-  height: 30%;
+  min-height: 30%;
   z-index: 9999;
   background-image: url("./assets/preloader.gif");
   background-repeat: no-repeat;
   background-position: center; }
 
-.slideOutLeft {
-  -webkit-animation: slideOutLeft 0.8s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
-  animation: slideOutLeft 0.8s cubic-bezier(0.55, 0.085, 0.68, 0.53) both; }
+.resultDiv > *:not(:last-child) {
+  margin-bottom: 3vh; }
 
-.slideInRight {
-  -webkit-animation: slideInRight 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
-  animation: slideInRight 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94) both; }
+.resultDiv .imageContainer {
+  max-width: 312px; }
 
-.fadeInFwd {
-  -webkit-animation: fadeInFwd 5s cubic-bezier(0.39, 0.575, 0.565, 1) both;
-  animation: fadeInFwd 5s cubic-bezier(0.39, 0.575, 0.565, 1) both; }
+.resultDiv li {
+  margin-bottom: 1vh;
+  line-height: 2.8rem; }
 
-.slide-in-bottom {
-  -webkit-animation: slide-in-bottom 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
-  animation: slide-in-bottom 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94) both; }
+.resultDiv ul li:before {
+  content: "·";
+  font-size: 25px;
+  vertical-align: middle;
+  line-height: 20px;
+  padding-right: 10px;
+  color: #F05924; }
 
-header {
+.resultDiv .buttonContainer {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  min-height: 20vh;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center; }
+  .resultDiv .buttonContainer button:not(:last-child) {
+    margin-right: 10%; }
 
-.moodButtons {
+footer {
+  background: #F05924;
+  color: #F49C7F;
+  padding: 2vh 0;
+  min-height: 6vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
-  justify-content: space-between; }
-  .moodButtons div {
-    text-align: center;
-    max-height: 200px; }
-    .moodButtons div img {
-      margin-bottom: 4%; }
-    .moodButtons div button {
-      width: 250px; }
-
-.moodDiv {
-  text-align: center; }
-
-.formTop,
-.formBottom {
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  text-align: center; }
-
-form {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center;
-  height: 50vh; }
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin-top: 5vh;
+  text-align: center; }
 
-.formTop {
-  padding-bottom: 4%; }
-  .formTop h2 {
-    padding: 6% 0; }
-  .formTop label {
-    margin: 0 5px; }
-  .formTop .inputContainer {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
+@media (max-width: 850px) {
+  h1 {
+    font-size: calc(7vw + 2rem);
+    line-height: calc(7vw + 3rem); }
+  h2 {
+    font-size: calc(2.3vw + 2rem);
+    line-height: calc(2.3vw + 3rem); }
+  .moodDiv .moodButtons {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
     -ms-flex-direction: column;
     flex-direction: column;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    justify-content: center; }
-  .formTop #calories {
-    width: 20%; }
-  .formTop .flexChild {
-    padding-bottom: 5%; }
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center; }
+    .moodDiv .moodButtons li:not(:last-child) {
+      margin-right: 0;
+      margin-bottom: 4vh; }
+    .moodDiv .moodButtons li img {
+      display: none; }
+  form .formChild label {
+    margin-bottom: 1vh; }
+  form .checkboxContainer {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column; }
+    form .checkboxContainer div:not(:last-child) {
+      margin-right: 0;
+      margin-bottom: 2vh; } }
 
-.formBottom {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex; }
-  .formBottom h2 {
-    padding-bottom: 6%; }
-  .formBottom label {
-    margin: 0 5px; }
-  .formBottom .checkboxContainer {
-    padding-bottom: 7%; }
-  .formBottom button {
-    width: 300px;
-    background: #aeadf0;
-    color: white;
-    border: 3px solid #aeadf0; }
-  .formBottom button:hover,
-  .formBottom button:focus {
-    background: #d8dcff; }
-
-.imageContainer {
-  max-width: 312px; }
-
-h3 {
-  text-shadow: 2px 2px 0 #d8dcff; }
-
-.recipeContainer {
-  margin: 0 30px; }
-  .recipeContainer ul li:before {
-    content: "·";
-    font-size: 25px;
-    vertical-align: middle;
-    line-height: 20px;
-    padding-right: 10px;
-    color: #F05924; }
-  .recipeContainer a {
-    color: #F05924;
-    text-decoration: none;
-    font-size: 1.5rem;
-    font-style: italic; }
-  .recipeContainer a:hover {
-    color: #F49C7F; }
-
-.buttonContainer {
-  margin: 40px auto;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center; }
-  .buttonContainer button {
-    margin: 0 5px; }
+@media (max-width: 430px) {
+  form button {
+    width: 180px; }
+  .wrapper {
+    width: 80%; } }

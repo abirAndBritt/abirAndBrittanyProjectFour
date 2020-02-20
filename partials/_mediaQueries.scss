@@ -1,0 +1,55 @@
+@media (max-width: 850px) {
+  //option 1
+  //     .moodDiv .moodButtons {
+  //     flex-direction: column;
+  //     align-items: center;
+  //      li:not(:last-child) {
+  //     margin-right: 0;
+  //     margin-bottom: 4vh;;
+  // }
+  //     }
+
+  //option 2
+  h1 {
+    font-size: calc(7vw + 2rem);
+    line-height: calc(7vw + 3rem);
+  }
+  h2 {
+    font-size: calc(2.3vw + 2rem);
+    line-height: calc(2.3vw + 3rem);
+  }
+  .moodDiv .moodButtons {
+    flex-direction: column;
+    align-items: center;
+    li {
+      &:not(:last-child) {
+        margin-right: 0;
+        margin-bottom: 4vh;
+      }
+      img {
+        display: none;
+      }
+    }
+  }
+  form {
+    .formChild label {
+      margin-bottom: 1vh;
+    }
+    .checkboxContainer {
+      flex-direction: column;
+      div:not(:last-child) {
+        margin-right: 0;
+        margin-bottom: 2vh;
+      }
+    }
+  }
+}
+
+@media (max-width: 430px) {
+  form button {
+    width: 180px;
+  }
+  .wrapper {
+    width: 80%;
+  }
+}

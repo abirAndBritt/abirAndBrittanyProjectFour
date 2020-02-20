@@ -23,13 +23,15 @@ body {
 /* to reset the margin and padding for some elements */
 h1,
 h2,
+h3,
 ul,
+ol,
 img,
-body,
 p,
-textarea,
 form,
-button {
+button,
+input, 
+body {
   margin: 0;
   padding: 0;
 }
@@ -46,11 +48,26 @@ img {
   height: auto;
 }
 
+// to ostyle all the links 
+  a {
+        color: $primaryColor;
+        text-decoration: none;
+        font-size: 1.5rem;
+        font-style: italic;
+        display: inline-block;
+    }
+
+    // to style all the links in hover and focus states
+    a:hover, a:focus {
+        color: $lightColor;
+    }
+
 /* general button styles */
 button {
   background-color: $accentColor1;
   color: $bodyTextColor;
-  padding: 20px;
+  width:250px;
+  height: 60px;
   font: inherit;
   border: none;
   cursor: pointer;
@@ -66,22 +83,25 @@ button:focus {
 h1 {
   font-family: $headingFont;
   color: $primaryColor;
-  line-height: 7.5rem;
+  line-height: 9rem;
   font-size: 8rem;
   letter-spacing: 3px;
   text-shadow: 4px 4px 0 $lightColor;
   text-transform: uppercase;
 }
 
+// to style heading 2
 h2 {
   font-family: $headingFont;
   font-size: 4rem;
-  line-height: 3.5rem;
+  line-height: 5rem;
   text-shadow: 2px 2px 0 $lightColor;
-  padding-bottom: 10px;
 }
 
+// to style heading 3
 h3 {
   font-family: $headingFont;
   font-size: 3rem;
+  line-height: 4rem;
+  text-shadow: 2px 2px 0 $accentColor3;
 }

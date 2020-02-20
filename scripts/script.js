@@ -13,8 +13,8 @@ drinkApp.getDrinks = function (queryString, oneIngredient, calories, sugar, glut
         method: 'GET',
         dataType: 'json',
         data: {
-            // apiKey: 'b5a81aab75e347daa78075a3628b5389',
-            apiKey: 'a60cdfa9200e4a088a41ebe8d60680fe',
+            apiKey: 'b5a81aab75e347daa78075a3628b5389',
+            // apiKey: 'a60cdfa9200e4a088a41ebe8d60680fe',
             // apiKey: '8a2c682e514a439d902fe345650979ed',
             type: 'drink',
             addRecipeInformation: 'true',
@@ -31,13 +31,13 @@ drinkApp.getDrinks = function (queryString, oneIngredient, calories, sugar, glut
         $('.preloader').fadeOut('fast'); //to hide the preloader gif
         drinkApp.drinks = result.results;
         if (drinkApp.drinks.length !== 0) {
-            $('.resultDiv').addClass('slide-in-bottom');
+            $('.resultDiv').addClass('slideInBottom');
             $('.resultDiv').removeClass('hidden');
             drinkApp.showResult();
         }
         else {
             alert('There is no matching drink!! Please try again!!');
-            $('form').removeClass('hidden');
+            $('form').removeClass('hidden slideOutLeft');
         }
 
     });
@@ -50,7 +50,8 @@ drinkApp.getIngredientsAndInstructions = function (id) {
         method: 'GET',
         dataType: 'json',
         data: {
-            apiKey: 'a60cdfa9200e4a088a41ebe8d60680fe',
+            apiKey: 'b5a81aab75e347daa78075a3628b5389',
+            // apiKey: 'a60cdfa9200e4a088a41ebe8d60680fe',
             // apiKey: '8a2c682e514a439d902fe345650979ed',
         }
 
@@ -76,8 +77,9 @@ drinkApp.autocompleteIngredients = function (text, newArray) {
         method: 'GET',
         dataType: 'json',
         data: {
+            apiKey: 'b5a81aab75e347daa78075a3628b5389',
             //apiKey: 'a60cdfa9200e4a088a41ebe8d60680fe',
-            apiKey: '8a2c682e514a439d902fe345650979ed',
+            // apiKey: '8a2c682e514a439d902fe345650979ed',
             query: text,
             number: 10,
         }
@@ -127,10 +129,9 @@ drinkApp.showResult = function () {
 // an event listener for the mood button
 drinkApp.moodEventListener = function () {
     $('.mood').on('click', function () {
-
-        
+        $('#moodDiv').removeClass('slideInRight');
         $('#moodDiv').addClass('slideOutLeft');
-        const t=setTimeout(() => {
+       setTimeout(() => {
             $('#moodDiv').addClass('hidden');
             $('form').removeClass('hidden');
             $('form').addClass('slideInRight');
@@ -145,8 +146,9 @@ drinkApp.moodEventListener = function () {
 drinkApp.submitEventListener = function () {
     $('#submitButton').on('click', function (e) {
         e.preventDefault();
-        $('form').addClass('slideInRight');
-        const t = setTimeout(() => {
+        $('form').removeClass('slideInRight');
+        $('form').addClass('slideOutLeft');
+        setTimeout(() => {
             $('form').addClass('hidden');
             $('.preloader').fadeIn('slow');
 
@@ -168,7 +170,7 @@ drinkApp.submitEventListener = function () {
                 dairy = $('#dairy').attr('id');
             }
             drinkApp.getDrinks(drinkApp.mood, oneIngredient, calories, sugar, gluten, dairy);
-        }, 2000);
+        }, 800);
     });
 }
 
@@ -193,15 +195,22 @@ drinkApp.oneIngredientChange = function () {
 // an event listener to restart the search button
 drinkApp.restartEventListener = function () {
     $('#restartSearchButton').on('click', function () {
-        $("form").trigger("reset");
-        $('.resultDiv').addClass('hidden');
-        $('#moodDiv').removeClass('hidden');
-        $('#moodDiv').addClass('moodDiv');
+        $('form').trigger("reset");
+        $('.resultDiv').addClass('slideOutTop');
+       setTimeout(function(){
+           $('.resultDiv').addClass('hidden');
+           $('#moodDiv').removeClass('hidden slideOutLeft');
+           $('#moodDiv').addClass('slideInRight');
+
+       },800);
+      
+
     })
 }
 
 // init method
 drinkApp.init = function () {
+    $('form').trigger("reset");
     drinkApp.moodEventListener();
     drinkApp.submitEventListener();
     drinkApp.anotherOptionEventListener();

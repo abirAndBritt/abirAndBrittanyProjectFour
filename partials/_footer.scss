@@ -1,9 +1,11 @@
-// footer {
-//     background: $primaryColor;
-//     color: $lightColor;
-//     height: 5vh;
-
-//     p {
-//         color:$lightColor;
-//     }
-// }
+footer {
+    background: $primaryColor;
+    color: $lightColor;
+    padding: 2vh 0;
+    min-height: 6vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5vh;
+    text-align: center;
+}
