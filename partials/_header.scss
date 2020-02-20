@@ -1,6 +1,10 @@
-// justifying the content of the header
+// to style the content of the header
 header {
-    padding: 5vh 0;
-   text-align: center;
-   min-height: 15vh;
+  text-align: center;
+  min-height: 20vh;
+  padding: 15px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
 }

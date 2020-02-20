@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-
+<!-- head starts here -->
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,7 +10,7 @@
     <link rel="icon" type="image/x-icon" href="assets/drinkFavicon.png">
     <link rel="stylesheet" href="styles.css">
 </head>
-
+<!--head ends here  -->
 <body>
     <header class="wrapper">
         <h1>Give me a drink!</h1>
@@ -20,17 +20,17 @@
             <div class="moodDiv" id="moodDiv">
                 <h2>How are you feeling today?</h2>
                 <ul class="moodButtons">
-                    <li>
+                    <li class="mood" id="coffee">
                         <img src="./assets/sleepy.png" alt="sleepy egg falling of toast">
-                        <button id="coffee" class="mood">A little sleepy</button>
+                        <button  class="mood">A little sleepy</button>
                     </li>
-                    <li>
+                    <li class="mood" id="smoothie">
                         <img src="./assets/boost.png" alt="tired egg holding his head">
-                        <button id="smoothie" class="mood">In need of a boost</button>
+                        <button >In need of a boost</button>
                     </li>
-                    <li>
+                    <li class="mood" id="wine">
                         <img src="./assets/wine.png" alt="happy egg holding pink balloon">
-                        <button id="wine" class="mood">Ready to party</button>
+                        <button >Ready to party</button>
                     </li>
                 </ul>
             </div>
@@ -86,7 +86,7 @@
         </section>
     </main>
     <footer>
-        <p>Copyright <span class="srOnly">©</span> 2020. Made by Abir Halwa and Brittany Giles </p>
+        <p>Copyright <span aria-hidden="true">©</span> 2020. Made by Abir Halwa and Brittany Giles </p>
     </footer>
     <script src='https://code.jquery.com/jquery-3.2.1.min.js'
         integrity='sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=' crossorigin='anonymous'></script>

@@ -30,7 +30,7 @@ img,
 p,
 form,
 button,
-input, 
+input,
 body {
   margin: 0;
   padding: 0;
@@ -48,25 +48,26 @@ img {
   height: auto;
 }
 
-// to ostyle all the links 
-  a {
-        color: $primaryColor;
-        text-decoration: none;
-        font-size: 1.5rem;
-        font-style: italic;
-        display: inline-block;
-    }
+// to ostyle all the links
+a {
+  color: $primaryColor;
+  text-decoration: none;
+  font-size: 1.5rem;
+  font-style: italic;
+  display: inline-block;
+}
 
-    // to style all the links in hover and focus states
-    a:hover, a:focus {
-        color: $lightColor;
-    }
+// to style all the links in hover and focus states
+a:hover,
+a:focus {
+  color: $lightColor;
+}
 
 /* general button styles */
 button {
   background-color: $accentColor1;
   color: $bodyTextColor;
-  width:250px;
+  width: 250px;
   height: 60px;
   font: inherit;
   border: none;
