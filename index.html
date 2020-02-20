@@ -12,17 +12,17 @@
 </head>
 <!--head ends here  -->
 <body>
+    <!-- header starts here -->
     <header class="wrapper">
         <h1>Give me a drink!</h1>
     </header>
-    
+    <!-- header ends here, main section starts here -->
     <main class="wrapper">
         <section>
-            
-        </section>
-        <section>
+            <!-- main div that appears on page load -->
             <div class="moodDiv" id="moodDiv">
                 <h2>How are you feeling today?</h2>
+                <!-- section with three mood options for user to choose from starts here -->
                 <ul class="moodButtons">
                     <li class="mood" id="coffee">
                         <img src="./assets/sleepy.png" alt="sleepy egg falling of toast">
@@ -38,7 +38,9 @@
                     </li>
                 </ul>
             </div>
+            <!-- form that appears after user selects a mood -->
             <form action="" class="hidden">
+                <!-- section for user to search for specific ingredient or specify maximum number of calories -->
                 <h2>Customize Your Options</h2>
                 <div class="formChild">
                     <label for="oneIngredient">Include this ingredient: </label>
@@ -48,6 +50,7 @@
                     <label for="calories">Max Calories: </label>
                     <input type="number" name="" id="calories" min="0" max="1000" step="1">
                 </div>
+                <!-- section for user to input dietary restrictions -->
                 <h2>Dietary Restrictions</h2>
                 <div class="checkboxContainer">
                     <div>
@@ -63,11 +66,12 @@
                         <label for="dairy">Dairy-Free</label>
                     </div>
                 </div>
-
+                <!-- button that submits form and calls to the api based on inputs -->
                 <button id="submitButton" type="submit">Submit</button>
             </form>
-
+            <!-- div for the preloader -->
             <div class="preloader hidden"></div>
+            <!-- div that appears once drink results comes back from api -->
             <div class="resultDiv hidden">
                 <h2 id="drinkTitle"></h2>
                 <div class="imageContainer">
@@ -82,6 +86,7 @@
 
                 </ol>
                 <a target="_blank" href="" id="drinkLink">Want more information? Click here!</a>
+                <!-- div with buttons for user to get another drink or start again from the beginning -->
                 <div class="buttonContainer">
                     <button id="anotherDrinkButton">Give me another option</button>
                     <button id="restartSearchButton">Change up your search</button>
@@ -89,6 +94,7 @@
             </div>
         </section>
     </main>
+    <!-- main content ends here, footer starts here -->
     <footer>
         <p>Copyright <span aria-hidden="true">©</span> 2020. Made by Abir Halwa and Brittany Giles </p>
     </footer>

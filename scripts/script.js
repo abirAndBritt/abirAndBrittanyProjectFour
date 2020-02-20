@@ -13,7 +13,7 @@ drinkApp.getDrinks = function (queryString, oneIngredient, calories, sugar, glut
         method: 'GET',
         dataType: 'json',
         data: {
-            apiKey: '88b667a72a8f4e68b6f11670dafb1318',
+            apiKey: '47c5192c91804eada3df786427f5a8a5',
             type: 'drink',
             addRecipeInformation: 'true',
             titleMatch: queryString,
@@ -52,10 +52,7 @@ drinkApp.getIngredientsAndInstructions = function (id) {
         method: 'GET',
         dataType: 'json',
         data: {
-            apiKey: '88b667a72a8f4e68b6f11670dafb1318',
-            // apiKey: 'a60cdfa9200e4a088a41ebe8d60680fe',
-            // apiKey: 'a6ccd7d3db234e5cad22189fd30db460',
-            // apiKey: '8a2c682e514a439d902fe345650979ed',
+            apiKey: 'ef216c6c7284463c904b903a13864023',
         }
     }).then(function (result) {
         result.extendedIngredients.forEach(function (item) {
@@ -80,11 +77,7 @@ drinkApp.autocompleteIngredients = function (text, newArray) {
         method: 'GET',
         dataType: 'json',
         data: {
-            // apiKey: 'b5a81aab75e347daa78075a3628b5389',
-            //apiKey: 'a60cdfa9200e4a088a41ebe8d60680fe',
-            // apiKey: '8a2c682e514a439d902fe345650979ed',
-            apiKey:'88b667a72a8f4e68b6f11670dafb1318',
-            // apiKey: 'a6ccd7d3db234e5cad22189fd30db460',
+            apiKey:'f05c1e4be1ce4a769f5f68474b7113be',
             query: text,
             number: 10,
         }
@@ -148,8 +141,9 @@ drinkApp.moodEventListener = function () {
 
 // an event listener to the submit button (which is used to search for a drink)
 drinkApp.submitEventListener = function () {
-    $('#submitButton').on('click', function (e) {
+    $('form').on('submit', function (e) {
         e.preventDefault();
+        //if($(this).valid()){
         $('form').removeClass('slideInRight');
         $('form').addClass('slideOutLeft');
         setTimeout(() => {
@@ -174,6 +168,7 @@ drinkApp.submitEventListener = function () {
             }
             drinkApp.getDrinks(drinkApp.mood, oneIngredient, calories, sugar, gluten, dairy);
         }, 800);
+        //}
     });
 }
 
