@@ -12,38 +12,38 @@
   }
   main {
     .moodDiv .moodButtons {
-    flex-direction: column;
-    align-items: center;
-    li {
-      &:not(:last-child) {
-        margin-right: 0;
-        margin-bottom: 4vh;
-      }
-      img {
-        display: none;
-      }
-    }
-  }
-  form {
-    .formChild label {
-      margin-bottom: 1vh;
-    }
-    .checkboxContainer {
       flex-direction: column;
-      div:not(:last-child) {
+      align-items: center;
+      li {
+        &:not(:last-child) {
+          margin-right: 0;
+          margin-bottom: 4vh;
+        }
+        img {
+          display: none;
+        }
+      }
+    }
+    form {
+      .formChild label {
+        margin-bottom: 1vh;
+      }
+      .checkboxContainer {
+        flex-direction: column;
+        div:not(:last-child) {
+          margin-right: 0;
+          margin-bottom: 2vh;
+        }
+      }
+    }
+    .resultDiv .buttonContainer {
+      flex-direction: column;
+      align-items: center;
+      button:not(:last-child) {
         margin-right: 0;
         margin-bottom: 2vh;
       }
     }
-  }
-  .resultDiv .buttonContainer {
-    flex-direction: column;
-    align-items: center;
-     button:not(:last-child) {
-       margin-right: 0;
-       margin-bottom: 2vh;
-     }
-  }
   }
 }
 
@@ -54,7 +54,7 @@
   .wrapper {
     width: 80%;
   }
-  footer{
+  footer {
     font-size: 1.3rem;
   }
 }

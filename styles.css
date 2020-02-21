@@ -7,14 +7,21 @@ html {
 body {
   margin: 0; }
 
-article, aside, footer, header, nav, section {
+article,
+aside,
+footer,
+header,
+nav,
+section {
   display: block; }
 
 h1 {
   font-size: 2em;
-  margin: .67em 0; }
+  margin: 0.67em 0; }
 
-figcaption, figure, main {
+figcaption,
+figure,
+main {
   display: block; }
 
 figure {
@@ -27,7 +34,7 @@ hr {
   overflow: visible; }
 
 pre {
-  font-family: monospace,monospace;
+  font-family: monospace, monospace;
   font-size: 1em; }
 
 a {
@@ -40,14 +47,18 @@ abbr[title] {
   -webkit-text-decoration: underline dotted;
   text-decoration: underline dotted; }
 
-b, strong {
+b,
+strong {
   font-weight: inherit; }
 
-b, strong {
+b,
+strong {
   font-weight: bolder; }
 
-code, kbd, samp {
-  font-family: monospace,monospace;
+code,
+kbd,
+samp {
+  font-family: monospace, monospace;
   font-size: 1em; }
 
 dfn {
@@ -60,19 +71,21 @@ mark {
 small {
   font-size: 80%; }
 
-sub, sup {
+sub,
+sup {
   font-size: 75%;
   line-height: 0;
   position: relative;
   vertical-align: baseline; }
 
 sub {
-  bottom: -.25em; }
+  bottom: -0.25em; }
 
 sup {
-  top: -.5em; }
+  top: -0.5em; }
 
-audio, video {
+audio,
+video {
   display: inline-block; }
 
 audio:not([controls]) {
@@ -85,30 +98,45 @@ img {
 svg:not(:root) {
   overflow: hidden; }
 
-button, input, optgroup, select, textarea {
+button,
+input,
+optgroup,
+select,
+textarea {
   font-family: sans-serif;
   font-size: 100%;
   line-height: 1.15;
   margin: 0; }
 
-button, input {
+button,
+input {
   overflow: visible; }
 
-button, select {
+button,
+select {
   text-transform: none; }
 
-button, html [type=button], [type=reset], [type=submit] {
+button,
+html [type="button"],
+[type="reset"],
+[type="submit"] {
   -webkit-appearance: button; }
 
-button::-moz-focus-inner, [type=button]::-moz-focus-inner, [type=reset]::-moz-focus-inner, [type=submit]::-moz-focus-inner {
+button::-moz-focus-inner,
+[type="button"]::-moz-focus-inner,
+[type="reset"]::-moz-focus-inner,
+[type="submit"]::-moz-focus-inner {
   border-style: none;
   padding: 0; }
 
-button:-moz-focusring, [type=button]:-moz-focusring, [type=reset]:-moz-focusring, [type=submit]:-moz-focusring {
+button:-moz-focusring,
+[type="button"]:-moz-focusring,
+[type="reset"]:-moz-focusring,
+[type="submit"]:-moz-focusring {
   outline: 1px dotted ButtonText; }
 
 fieldset {
-  padding: .35em .75em .625em; }
+  padding: 0.35em 0.75em 0.625em; }
 
 legend {
   -webkit-box-sizing: border-box;
@@ -126,26 +154,30 @@ progress {
 textarea {
   overflow: auto; }
 
-[type=checkbox], [type=radio] {
+[type="checkbox"],
+[type="radio"] {
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
   padding: 0; }
 
-[type=number]::-webkit-inner-spin-button, [type=number]::-webkit-outer-spin-button {
+[type="number"]::-webkit-inner-spin-button,
+[type="number"]::-webkit-outer-spin-button {
   height: auto; }
 
-[type=search] {
+[type="search"] {
   -webkit-appearance: textfield;
   outline-offset: -2px; }
 
-[type=search]::-webkit-search-cancel-button, [type=search]::-webkit-search-decoration {
+[type="search"]::-webkit-search-cancel-button,
+[type="search"]::-webkit-search-decoration {
   -webkit-appearance: none; }
 
 ::-webkit-file-upload-button {
   -webkit-appearance: button;
   font: inherit; }
 
-details, menu {
+details,
+menu {
   display: block; }
 
 summary {
@@ -164,7 +196,7 @@ template {
   visibility: hidden;
   display: block;
   font-size: 0;
-  content: '';
+  content: "";
   clear: both;
   height: 0; }
 
@@ -173,7 +205,9 @@ html {
   -webkit-box-sizing: border-box;
   box-sizing: border-box; }
 
-*, *:before, *:after {
+*,
+*:before,
+*:after {
   -webkit-box-sizing: inherit;
   box-sizing: inherit; }
 
@@ -198,9 +232,9 @@ html {
 body {
   font-family: "Open Sans", sans-serif;
   font-size: 1.8rem;
-  color: #00283A;
+  color: #00283a;
   line-height: 2rem;
-  background-color: #FEF8E2; }
+  background-color: #fef8e2; }
 
 /* to style the wrapper classes */
 .wrapper {
@@ -234,7 +268,7 @@ img {
   height: auto; }
 
 a {
-  color: #F05924;
+  color: #f05924;
   text-decoration: none;
   font-size: 1.5rem;
   font-style: italic;
@@ -242,12 +276,12 @@ a {
 
 a:hover,
 a:focus {
-  color: #F49C7F; }
+  color: #f49c7f; }
 
 /* general button styles */
 button {
-  background-color: #FFDA58;
-  color: #00283A;
+  background-color: #ffda58;
+  color: #00283a;
   width: 250px;
   height: 60px;
   font: inherit;
@@ -257,23 +291,23 @@ button {
 /* to style the buttons when hover or focus */
 button:hover,
 button:focus {
-  background-color: #F49C7F; }
+  background-color: #f49c7f; }
 
 /* to style heading 1 */
 h1 {
   font-family: "Francois One", sans-serif;
-  color: #F05924;
+  color: #f05924;
   line-height: 9rem;
   font-size: 8rem;
   letter-spacing: 3px;
-  text-shadow: 4px 4px 0 #F49C7F;
+  text-shadow: 4px 4px 0 #f49c7f;
   text-transform: uppercase; }
 
 h2 {
   font-family: "Francois One", sans-serif;
   font-size: 4rem;
   line-height: 5rem;
-  text-shadow: 2px 2px 0 #F49C7F; }
+  text-shadow: 2px 2px 0 #f49c7f; }
 
 h3 {
   font-family: "Francois One", sans-serif;
@@ -496,7 +530,7 @@ main {
     main form button:hover,
     main form button:focus {
       background: #d8dcff;
-      color: #00283A; }
+      color: #00283a; }
   main .preloader {
     position: absolute;
     top: 35%;
@@ -522,7 +556,7 @@ main {
     vertical-align: middle;
     line-height: 20px;
     padding-right: 10px;
-    color: #F05924; }
+    color: #f05924; }
   main .resultDiv .buttonContainer {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -534,7 +568,7 @@ main {
       margin-right: 10%; }
 
 footer {
-  background: #F05924;
+  background: #f05924;
   color: #fff;
   min-height: 5vh;
   display: -webkit-box;

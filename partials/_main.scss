@@ -2,7 +2,7 @@
 main {
   min-height: 75vh;
   padding-bottom: 20px;
-// to style the moodDiv
+  // to style the moodDiv
   .moodDiv {
     text-align: center;
     h2 {
@@ -70,7 +70,7 @@ main {
     button:hover,
     button:focus {
       background: $accentColor3;
-      color:$bodyTextColor;
+      color: $bodyTextColor;
     }
   }
 

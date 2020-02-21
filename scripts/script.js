@@ -77,7 +77,7 @@ drinkApp.autocompleteIngredients = function (text, newArray) {
         method: 'GET',
         dataType: 'json',
         data: {
-            apiKey:'f05c1e4be1ce4a769f5f68474b7113be',
+            apiKey: 'f05c1e4be1ce4a769f5f68474b7113be',
             query: text,
             number: 10,
         }
@@ -143,7 +143,6 @@ drinkApp.moodEventListener = function () {
 drinkApp.submitEventListener = function () {
     $('form').on('submit', function (e) {
         e.preventDefault();
-        //if($(this).valid()){
         $('form').removeClass('slideInRight');
         $('form').addClass('slideOutLeft');
         setTimeout(() => {
@@ -168,7 +167,6 @@ drinkApp.submitEventListener = function () {
             }
             drinkApp.getDrinks(drinkApp.mood, oneIngredient, calories, sugar, gluten, dairy);
         }, 800);
-        //}
     });
 }
 
